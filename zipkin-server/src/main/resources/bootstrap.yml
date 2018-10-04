@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Zipkin-Server
+server:
+  port: 9411
+eureka:
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
