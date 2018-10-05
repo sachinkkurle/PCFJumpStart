@@ -1,5 +1,6 @@
-Student-Sample
-Sample Application to learn Eureka discovery, Zuul Routing, logging and zipkin traces
+PCF Jump Starter Kit - This library contains components which are commonly used and required to migrate your application on PCF
+
+Student-Sample - Sample Application to learn Eureka discovery, Zuul Routing, logging and zipkin traces
 
 ==========================================================================
 
