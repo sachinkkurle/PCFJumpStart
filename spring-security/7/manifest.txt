@@ -1,0 +1,155 @@
+Users\Kevin Bowersox\Desktop\Development\InfiniteSkills\Courses\Spring Security\Lessons\0200\0206 Project Setup\Project Setup
+   │
+   ├[.settings]
+   │   │
+   │   ├
+   │   ├org.eclipse.jdt.core
+   │   ├org.eclipse.jst.j2ee.ejb.annotations.xdoclet
+   │   ├org.eclipse.m2e.core
+   │   ├org.eclipse.wst.common
+   │   ├org.eclipse.wst.common.project.facet.core
+   │   ├org.eclipse.wst.jsdt.ui.superType
+   │   └org.eclipse.wst.jsdt.ui.superType
+   ├[src]
+   │   │
+   │   ├[main]
+   │   │   │
+   │   │   ├[java]
+   │   │   │   │
+   │   │   │   └[com]
+   │   │   │       │
+   │   │   │       └[oreilly]
+   │   │   │           │
+   │   │   │           └[security]
+   │   │   │               │
+   │   │   │               ├[domain]
+   │   │   │               │   │
+   │   │   │               │   ├[entities]
+   │   │   │               │   │   │
+   │   │   │               │   │   ├[util]
+   │   │   │               │   │   │   │
+   │   │   │               │   │   │   └LocalDateConverter
+   │   │   │               │   │   ├Appointment
+   │   │   │               │   │   ├Automobile
+   │   │   │               │   │   └AutoUser
+   │   │   │               │   └[repositories]
+   │   │   │               │       │
+   │   │   │               │       ├AppointmentRepository
+   │   │   │               │       └AutoUserRepository
+   │   │   │               └[web]
+   │   │   │                   │
+   │   │   │                   └[controllers]
+   │   │   │                       │
+   │   │   │                       ├AppointmentController
+   │   │   │                       └HomeController
+   │   │   ├[resources]
+   │   │   │   │
+   │   │   │   ├[META-INF]
+   │   │   │   │   │
+   │   │   │   │   └persistence
+   │   │   │   └log4j
+   │   │   └[webapp]
+   │   │       │
+   │   │       ├[resources]
+   │   │       │   │
+   │   │       │   ├[css]
+   │   │       │   │   │
+   │   │       │   │   ├bootstrap-multiselect
+   │   │       │   │   ├datepicker
+   │   │       │   │   └global
+   │   │       │   └[js]
+   │   │       │       │
+   │   │       │       ├appointments
+   │   │       │       ├bootstrap-datepicker
+   │   │       │       └bootstrap-multiselect
+   │   │       └[WEB-INF]
+   │   │           │
+   │   │           ├[spring]
+   │   │           │   │
+   │   │           │   ├application-context
+   │   │           │   └dispatcher-servlet
+   │   │           ├[views]
+   │   │           │   │
+   │   │           │   ├appointment
+   │   │           │   ├appointments
+   │   │           │   ├header
+   │   │           │   ├home
+   │   │           │   ├login
+   │   │           │   └services
+   │   │           └web
+   │   └[test]
+   │       │
+   │       ├[java]
+   │       │   │
+   │       │   └[com]
+   │       │       │
+   │       │       └[oreilly]
+   │       │           │
+   │       │           └[security]
+   │       │               │
+   │       │               └AutoUserTest
+   │       └[resources]
+   │           │
+   │           ├application-context
+   │           ├init
+   │           └log4j
+   ├[target]
+   │   │
+   │   ├[classes]
+   │   │   │
+   │   │   ├[com]
+   │   │   │   │
+   │   │   │   └[oreilly]
+   │   │   │       │
+   │   │   │       └[security]
+   │   │   │           │
+   │   │   │           ├[domain]
+   │   │   │           │   │
+   │   │   │           │   ├[entities]
+   │   │   │           │   │   │
+   │   │   │           │   │   ├[util]
+   │   │   │           │   │   │   │
+   │   │   │           │   │   │   └LocalDateConverter
+   │   │   │           │   │   ├Appointment
+   │   │   │           │   │   ├Automobile
+   │   │   │           │   │   └AutoUser
+   │   │   │           │   └[repositories]
+   │   │   │           │       │
+   │   │   │           │       ├AppointmentRepository
+   │   │   │           │       └AutoUserRepository
+   │   │   │           └[web]
+   │   │   │               │
+   │   │   │               └[controllers]
+   │   │   │                   │
+   │   │   │                   ├AppointmentController
+   │   │   │                   └HomeController
+   │   │   ├[META-INF]
+   │   │   │   │
+   │   │   │   ├[maven]
+   │   │   │   │   │
+   │   │   │   │   └[com.oreilly.security]
+   │   │   │   │       │
+   │   │   │   │       └[spring-security]
+   │   │   │   │           │
+   │   │   │   │           ├pom
+   │   │   │   │           └pom
+   │   │   │   ├MANIFEST
+   │   │   │   └persistence
+   │   │   └log4j
+   │   └[test-classes]
+   │       │
+   │       ├[com]
+   │       │   │
+   │       │   └[oreilly]
+   │       │       │
+   │       │       └[security]
+   │       │           │
+   │       │           ├AutoUserTest$1
+   │       │           └AutoUserTest
+   │       ├application-context
+   │       ├init
+   │       └log4j
+   ├
+   ├
+   ├
+   └pom
