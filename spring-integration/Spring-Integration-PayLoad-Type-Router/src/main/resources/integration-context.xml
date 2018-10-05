@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-5.0.xsd">
+<int:gateway service-interface="learn.avinash.integration.PrinterGateway"
+		default-request-channel="inputChannel"/>
+	
+	<int:payload-type-router input-channel="inputChannel">
+		<int:mapping type="java.lang.Integer" channel="intChannel"/>
+		<int:mapping type="java.lang.String" channel="stringChannel"/>
+	</int:payload-type-router>
+	
+	<int:channel id="inputChannel" />		
+
+	<bean id="printService" class="learn.avinash.integration.PrintService"/>
+
+	<bean id="numericPrintService" class="learn.avinash.integration.NumericPrintService"/>
+
+	<int:service-activator ref="numericPrintService" method="print" input-channel="intChannel"/>
+
+	<int:service-activator ref="printService" method="print" input-channel="stringChannel"/>
+
+</beans>

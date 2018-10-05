@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-5.0.xsd">
+
+
+	<int:gateway service-interface="learn.avinash.integration.PrinterGateway"
+		default-request-channel="inputChannel" />
+	<int:channel id="inputChannel"></int:channel>
+	<int:channel id="outputChannel"></int:channel>
+		<int:channel id="filterputChannel"></int:channel>
+			<int:channel id="enricherChannel"></int:channel>
+		
+	<bean id="customEnricher" class="learn.avinash.integration.CustomHeaderEnricher"/>
+	
+	<int:header-enricher input-channel="inputChannel" 
+	output-channel="enricherChannel">
+	<int:header name="publickey"  ref="customEnricher" method="getHeaderVlaue"></int:header>
+	</int:header-enricher>
+	
+	<int:header-filter 
+	input-channel="enricherChannel" 
+	output-channel="outputChannel"
+	header-names="privateKey"/>
+	
+	<!--  int:transformer expression="payload.toUpperCase()"
+	 input-channel="inputChannel" 
+	 output-channel="outputChannel"-->
+
+
+<int:transformer ref="customtransformer"
+method="Trasnform"
+	 input-channel="filterputChannel" 
+	 output-channel="outputChannel"/>
+
+	<bean id="printService" class="learn.avinash.integration.PrintService"></bean>
+	<int:service-activator ref="printService" method="print" 
+	input-channel="outputChannel"></int:service-activator>
+	<bean id="customtransformer" class="learn.avinash.integration.CustomTransformer"/>
+
+</beans>
