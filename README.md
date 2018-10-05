@@ -35,7 +35,9 @@ These are in the order of low to high priority. Default log level is info, so th
 
 This log level can be modified by the below property in the yml file, logging: level: root: warn
 
-========================================================================== If you want to find the details for each request, open zipkin dashboard and find the trace details
+========================================================================== 
+
+If you want to find the details for each request, open zipkin dashboard and find the trace details
 
 ==========================================================================
 
