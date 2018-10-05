@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"First serenity test","Filedoesnot exist","COMPROMISED","2018-08-12T22:36:29.266-06:00","0.0","2.73"
+"First serenity test","Get all student","SUCCESS","2018-08-12T22:36:24.073-06:00","0.0","2.4"
+"First serenity test","Is this manul test","PENDING","2018-08-12T22:36:18.246-06:00","0.0","2.91"
+"First serenity test","This is a skipped test","IGNORED","2018-08-12T22:36:34.252-06:00","0.0","2.6"
+"First serenity test","This is failing test","FAILURE","2018-08-12T22:36:46.859-06:00","0.0","3.43"
+"First serenity test","This pending test","PENDING","2018-08-12T22:36:52.743-06:00","0.0","2.06"
+"First serenity test","This test cause error","ERROR","2018-08-12T22:36:39.909-06:00","0.0","3.44"

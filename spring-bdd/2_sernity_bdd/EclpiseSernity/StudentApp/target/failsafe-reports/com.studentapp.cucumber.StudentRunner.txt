@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.studentapp.cucumber.StudentRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.301 sec - in com.studentapp.cucumber.StudentRunner
