@@ -1,0 +1,4 @@
+com\spring\learn\swagger\controller\StudentController.class
+com\spring\learn\swagger\model\Student.class
+com\spring\learn\swagger\repository\StudentRepository.class
+com\spring\learn\swagger\Application.class
